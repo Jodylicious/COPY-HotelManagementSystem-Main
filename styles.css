@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0ebe3;
+}
+
+.container {
+  max-width: 83%;
+  height: 100%;
+  margin-left: 17%; /* Same as the width of the sidenav */
+  font-size: 28px;
+  padding: 0px 20px 20px 20px;
+}
+
+/* DEFAULT TABLE STYLE */
+thead th {
+  background-color: #18978f;
+  color: white;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #e9dac1;
+}
+
+th,
+td {
+  text-align: center;
+  border: 2px solid #54bab9;
+}
+
+tr:hover {
+  background-color: #54bab9;
+}
+
+.error-message-container {
+  max-width: 100%;
+  background-color: #18978f;
+  margin: 0;
+  padding: 100px;
+}
+
+.error-message-code,
+.error-message-label {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.error-message-code {
+  font-size: 200px;
+  line-height: 200px;
+}
+
+.error-message-label {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+/* sidenav logo and hotel name */
+.title-logo-div {
+  display: block;
+  justify-content: center;
+  margin: 20px 0px 50px 0px;
+  max-width: 100%;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  padding: 0px 8px 10px 8px;
+}
+
+.logo-div img {
+  max-width: 150px;
+  border-radius: 500px;
+  margin-inline: 0;
+  padding: 0;
+}
+
+.hotel-name-label {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 100%;
+  text-align: center;
+  margin-inline: 0;
+  padding-inline: 8px;
+}
+
+/* sidenav navs */
+.sidenav {
+  height: 100%;
+  width: 17%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #54bab9;
+  border-right: 4px solid darkcyan;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 12px 15px 12px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.sidenav a:hover {
+  color: white;
+  background-color: #18978f;
+  font-weight: bold;
+}
+
+.sidenav .active {
+  color: white;
+  background-color: #18978f;
+  font-weight: bold;
+  
+}
+
+/* contents */
+.dashboard-img-div img {
+  max-width: 100%;
+  margin: 0px 0px 15px 0px;
+  padding-top: 20px;
+}
+
+/* dashboard monitorings */
+.others-div {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.ongoing-reservations {
+  width: 55%;
+}
+
+/* dashboard table */
+.ongoing-reservations-label {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #18978f;
+  letter-spacing: 2px;
+  padding-block: 5px;
+}
+
+.dashboard-table-container {
+  overflow-y: auto;
+  height: 225px;
+}
+
+.dashboard-table-container thead th {
+  position: sticky;
+  top: 0;
+}
+
+.ongoing-reservations-table th,
+.ongoing-reservations-table td {
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+/* Rooms Available */
+.rooms-available {
+  width: 28%;
+}
+
+.rooms-available-label {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #18978f;
+  letter-spacing: 2px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: white;
+  padding-block: 10px;
+}
+
+.rooms-available-count {
+  font-size: 130px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+  border-radius: 0px 0px 30px 30px;
+  background-color: #18978f;
+  padding: 15px 0px 15px 0px;
+}
+
+/* header/topnav */
+.nav {
+  max-width: 83%;
+  margin-left: 17%;
+  height: 56px;
+  padding: 15px 20px 20px 20px;
+  background-color:#18978f;
+  border-bottom: 5px solid #f0ebe3;
+}
+.nav ul {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  align-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px 15px 20px;
+  margin: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  background-color:#54bab9;
+  color: black;
+  font-weight: bold;
+}
+
+.nav .active {
+  background-color: #f0ebe3;
+  color: black;
+  font-weight: bold;
+}
+
+/* Hotel Management */
+/* Reservations Management */
+/* Monitoring */
+.content-container {
+  max-width: 80%;
+  height: 100%;
+  float: left;
+  margin: 20px 0px 0px 0px;
+}
+
+.content-nav {
+  height: 100%;
+  width: 16.5%;
+  position: fixed;
+  z-index: 1;
+  top: 76px;
+  right: 0;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
+.manage-btn{
+  padding: 15px 10px 15px 10px;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  background-color: #54bab9;
+  border: none;
+  margin-bottom: 20px;
+  float: right;
+}
+.manage-btn:hover{
+  background-color:#54bab9;
+  color: black;
+  font-weight: bold;
+}
+.view-type-div {
+  background-color: #54bab9;
+  padding-inline: 0;
+  width: 100%;
+}
+/* ipinalit ko sa title na may button at dropdown */
+.viewheader {
+  background-color: #54bab9;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+
+/* monitoring table */
+.monitoring-table-div {
+  padding: 20px 20px 20px 20px;
+  background-color: #e9dac1;
+  max-width: 100%;
+}
+
+.reservations-monitoring-table-container {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+/* dito ung part na di ko maedit ung table para maging responsize at fit sa container */
+.room-monitoring-table-container {
+  overflow-y: auto;
+  width: 800px;
+
+}
+
+.reservations-monitoring-table-container thead th {
+  position: sticky;
+  top: 0;
+}
+.reservations-monitoring-table {
+  white-space: nowrap;
+  background-color: #f0ebe3;
+  width: 100%;
+ overflow-x: auto;
+}
+
+.reservations-monitoring-table th,
+.reservations-monitoring-table td {
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 13px;
+  }
+  .hotel-name-label {
+    font-size: 15px;
+  }
+  .logo-div img {
+    max-width: 70px;
+  }
+  .ongoing-reservations-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  thead {
+    font-size: 15px;
+  }
+  tbody {
+    font-size: 15px;
+  }
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+
+  .content-nav button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 9px;
+    padding-inline: 0px;
+  }
+  .hotel-name-label {
+    font-size: 13px;
+  }
+  .logo-div img {
+    max-width: 50px;
+  }
+  .others-div {
+    display: block;
+  }
+  .ongoing-reservations,
+  .rooms-available {
+    width: 100%;
+  }
+  .rooms-available {
+    margin-top: 15px;
+  }
+
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+  .nav a {
+    padding: 10px 15px 10px 15px;
+    font-size: 13px;
+  }
+  .content-nav button {
+    font-size: 7px;
+    padding-inline: 0px;
+  }
+
+  .nav-check-in{
+    background-color: #18978f;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+/* para ito sa mga submenus ng room management like (manage, at mga buttons, search bar */
+.searchbar{
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+}
+.searchbtn{
+  background-color: #18978f;
+  border:2px solid #18978f;
+  color: white;
+}
+.btn-group{
+float: right;
+}
+.btn-group-tabs{
+  background-color: #18978f;
+  border:  5px solid #e9dac1;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+}
+.newroom-table-div {
+  padding: 20px 20px 20px 20px;
+  background-color: #e9dac1;
+  width: 930px;
+}
+select, label, .radio-btn, .newroom-btn-group, input{
+margin-bottom: 20px;
+font-size: 16px;
+padding-right: 20px;
+}
+.newroom-btn{
+  background-color: #18978f;
+  border:  5px solid #e9dac1;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+}
+/* para sa mga add(manage) sa Room Management*/
+.text-input{
+  font-size: 16px;
+}
+
+
+
+/* calrence's */
+.page-title-div {
+  background-color: #54bab9;
+  max-width: 79%;
+  margin-top: 20px;
+}
+
+.page-title-label h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-block: 20px;
+  margin: 0;
+  letter-spacing: 3px;
+  max-width: 100%;
+}
+
+.reservation-management-form-div {
+  background-color: #e9dac1;
+  padding: 20px;
+  max-width: 79%;
+}
+fieldset {
+  background-color: #f0ebe3;
+  width: 100%;
+  border: 2px solid #54bab9;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0px 20px 10px 0px;
+  display: inline;
+}
+.wholeFieldSet {
+  display: inline-flex;
+  /* max-width: 100%; */
+}
+.rightFieldSet {
+  width: 49%;
+}
+.leftFieldSet {
+  width: 49%;
+
+  margin-right: 20px;
+}
+
+legend {
+  color: #18978f;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.reservation-management-form-div label {
+  font-size: 18px;
+  color: black;
+  display: block;
+  padding: 5px;
+}
+
+/* label[for='customerLName'] {
+  display: none;
+} */
+
+#customerName {
+  margin: 0px 0px 45px 0px;
+}
+
+label[for='gender'] {
+  margin: 35px 0px 0px 0px;
+}
+.reservation-management-form-div input,
+.reservation-management-form-div select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 0px 0px 10px 0px;
+}
+
+.reservation-management-form-div #balance {
+  width: 100%;
+}
+
+.form-buttons button {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  margin-inline: 15px;
+  width: 100px;
+  background-color: #18978f;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.form-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.check-out-div {
+  display: flex;
+}
+.servicesAvailed-div {
+  width: 49%;
+  margin: 10px 20px 0px 0px;
+}
+
+.check-OutPayment-div {
+  width: 49%;
+}
+.check-OutPayment {
+  width: 100%;
+}
+
+.servicesAvailedLabel {
+  font-size: 20px;
+  color: #18978f;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.servicesAvailedCheckBox label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.servicesAvailedCheckBox input {
+  position: absolute;
+  cursor: pointer;
+  height: 30px;
+  width: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .content-nav button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 13px;
+  }
+  .hotel-name-label {
+    font-size: 15px;
+  }
+  .logo-div img {
+    max-width: 70px;
+  }
+  .ongoing-reservations-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  thead {
+    font-size: 15px;
+  }
+  tbody {
+    font-size: 15px;
+  }
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+
+  .content-nav button {
+    font-size: 9px;
+  }
+
+  .wholeFieldSet {
+    display: block;
+    /* max-width: 100%; */
+  }
+  .rightFieldSet {
+    width: 100%;
+  }
+  .leftFieldSet {
+    width: 100%;
+  }
+  .check-out-div {
+    display: block;
+  }
+  .servicesAvailed-div {
+    width: 100%;
+    /* margin-right: 20px; */
+  }
+
+  .check-OutPayment-div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 9px;
+    padding-inline: 0px;
+  }
+  .hotel-name-label {
+    font-size: 13px;
+  }
+  .logo-div img {
+    max-width: 50px;
+  }
+  .others-div {
+    display: block;
+  }
+  .ongoing-reservations,
+  .rooms-available {
+    width: 100%;
+  }
+  .rooms-available {
+    margin-top: 15px;
+  }
+  /* .ongoing-reservations-label {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  thead {
+    font-size: 13px;
+  }
+  tbody {
+    font-size: 13px;
+  } */
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+  .nav a {
+    /* padding: 20px 20px 15px 20px;
+    font-size: 15px; */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 20px 20px 15px 20px;
+    margin: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .content-nav button {
+    font-size: 7px;
+    padding-inline: 0px;
+  }
+  legend {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+}
+
+.text-input{
+  font-size: 16px;
+}
+
